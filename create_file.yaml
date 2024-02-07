@@ -1,0 +1,11 @@
+---
+- name: This playbook creates a file or dir
+  hosts: all
+  #become: true
+  tasks:
+  - name: creating a file
+    file:
+      path: /home/ansible/demo3
+      state: absent
+      owner: ansible
+      group: ansible

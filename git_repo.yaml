@@ -1,0 +1,11 @@
+---
+- name: ansible play-book
+  hosts: all
+  become: true
+  vars_files:
+    - vault-pass.yaml
+  tasks:
+  - name: clone repo
+    git:
+      repo: https://bunty4200:{{ password }}@github.com/bunty4200/ansible.git
+      dest: /opt/ansible/test-vault

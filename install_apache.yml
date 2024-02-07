@@ -1,0 +1,9 @@
+---
+- name: This playbok for apache
+  hosts: appservers
+  become: true
+  tasks:
+  - name: Install apache
+    apt:
+      name: apache2
+      state: present

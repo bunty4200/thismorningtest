@@ -1,0 +1,9 @@
+---
+- name: unistall apache2
+  hosts: 172.31.47.70
+  become: true
+  tasks:
+  - name: stop apache2 service
+    service:
+      name: apache2
+      state: stopped
